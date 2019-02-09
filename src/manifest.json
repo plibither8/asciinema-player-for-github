@@ -9,12 +9,20 @@
         {
             "run_at": "document_end",
             "matches": [
-                "https://*.github.com/*",
-                "http://*.github.com/*"
+                "*://*.github.com/*"
             ],
             "js": [
-                "js/index.js"
+                "index.js"
             ]
         }
-    ]
+    ],
+    "permissions": [
+        "webRequest",
+        "webRequestBlocking",
+        "*://*.github.com/*"
+    ],
+    "background": {
+        "scripts": ["background.js"],
+        "persistent": true
+    }
 }

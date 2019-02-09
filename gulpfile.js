@@ -11,7 +11,6 @@ gulp.task('js', () => {
 		['@babel/env', {targets: {browsers: ['> 75%']}}]
 	];
 	return gulp.src('src/*.js')
-		.pipe(concat('index.js'))
 		.pipe(babel({presets}))
 		.pipe(uglify())
 		.pipe(gulp.dest('dist'));
@@ -36,6 +35,7 @@ gulp.task('manifest', () => {
 
 gulp.task('watch', () => {
 	gulp.watch('src/*.js', gulp.series('js'));
+	gulp.watch('src/manifest.json', gulp.series('manifest'));
 });
 
 gulp.task('build:dev', gulp.parallel(

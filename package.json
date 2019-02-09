@@ -1,0 +1,64 @@
+{
+  "name": "github-asciinema-embed-player",
+  "version": "0.0.1",
+  "description": "Automatically detect instances of asciinema links in a README on GitHub and embed the player in its place",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eclint check && xo",
+    "lint:fix": "eclint fix && xo --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/agarwalml/mehul.al.git"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/core": "^7.1.2",
+    "@babel/preset-env": "^7.1.0",
+    "del": "^3.0.0",
+    "eclint": "^2.8.1",
+    "gulp": "^4.0.0",
+    "gulp-babel": "^8.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-uglify-es": "^1.0.4",
+    "gulp-zip": "^4.2.0",
+    "husky": "^1.3.1",
+    "lint-staged": "^8.1.3",
+    "merge-stream": "^1.0.1",
+    "xo": "^0.24.0"
+  },
+  "author": "Mihir Chaturvedi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/plibither8/github-asciinema-embed-player/issues"
+  },
+  "homepage": "https://github.com/plibither8/github-asciinema-embed-player",
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "relative": true,
+    "linters": {
+      "**/*": [
+        "eclint fix",
+        "git add"
+      ],
+      "**/*.{js,json}": [
+        "xo --fix",
+        "git add"
+      ]
+    }
+  },
+  "xo": {
+    "overrides": [
+      {
+        "files": "src/**/*",
+        "env": [
+          "browser"
+        ]
+      }
+    ]
+  }
+}

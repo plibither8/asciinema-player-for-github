@@ -1,4 +1,4 @@
-# 🎬 asciinema Player for GitHub
+# <img src="src/icon.png" width="45" align="left"> asciinema Player for GitHub
 
 [![Chrome Webstore Version](https://img.shields.io/chrome-web-store/v/mkllmpcfhjcbkmegdpnaemhpdddffhil.svg)](https://chrome.google.com/webstore/detail/asciinema-player-for-gith/mkllmpcfhjcbkmegdpnaemhpdddffhil)
 [![Chrome Webstore Users](https://img.shields.io/chrome-web-store/users/mkllmpcfhjcbkmegdpnaemhpdddffhil.svg)](https://chrome.google.com/webstore/detail/asciinema-player-for-gith/mkllmpcfhjcbkmegdpnaemhpdddffhil)

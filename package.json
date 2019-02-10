@@ -59,6 +59,9 @@
           "browser"
         ]
       }
+    ],
+    "globals": [
+      "chrome"
     ]
   }
 }

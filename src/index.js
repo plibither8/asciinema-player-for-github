@@ -1,6 +1,10 @@
 const IMAGES = document.querySelectorAll('article.markdown-body img');
 
 for (const image of IMAGES) {
+	if (!(image.hasAttribute('data-canonical-src'))) {
+		continue;
+	}
+
 	const imageSrc = new URL(image.dataset.canonicalSrc);
 
 	if (imageSrc.hostname !== 'asciinema.org') {
@@ -15,7 +19,7 @@ for (const image of IMAGES) {
 	const scriptId = `asciicast-${castId}`;
 	playerScript.setAttribute('src', scriptSrc);
 	playerScript.setAttribute('id', scriptId);
-	playerScript.setAttribute('async', true);
+    playerScript.setAttribute('async', true);
 
 	imageAnchorEl.parentNode.replaceChild(playerScript, imageAnchorEl);
 }

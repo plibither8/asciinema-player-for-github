@@ -1,7 +1,7 @@
 {
     "name": "asciinema Player For GitHub",
     "short_name": "asciinema Player",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "description": "Automatically detect instances of asciinema links in a README on GitHub and embed the player in its place",
     "manifest_version": 2,
     "author": "Mihir Chaturvedi",
@@ -24,5 +24,10 @@
     "background": {
         "scripts": ["background.js"],
         "persistent": true
+    },
+    "icons": {
+      "16": "assets/icons/icon16.png",
+      "48": "assets/icons/icon48.png",
+      "128": "assets/icons/icon128.png"
     }
 }

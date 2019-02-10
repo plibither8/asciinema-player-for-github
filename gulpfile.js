@@ -16,7 +16,7 @@ gulp.task('js', () => {
 
 gulp.task('binaries', () => {
 	const paths = {
-		'src/img/**/*': 'dist/assets/img',
+		'src/icons/**/*': 'dist/assets/icons',
 	};
 
 	return merge(Object.entries(paths).map(([from, to]) =>
@@ -39,7 +39,7 @@ gulp.task('build:dev', gulp.parallel(
 ));
 
 gulp.task('package', () => {
-	return gulp.src('dist/*')
+	return gulp.src('dist/**/*')
 		.pipe(zip('extension.zip'))
 		.pipe(gulp.dest('./'));
 });

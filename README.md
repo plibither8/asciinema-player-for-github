@@ -26,6 +26,27 @@ For more details: [Content Security Policy (CSP) - Google Chrome](https://develo
 
 Code: [background.js](src/background.js)
 
+## Development
+
+1. Clone this repository by running
+    ```
+    git clone https://github.com/plibither8/asciinema-player-for-github.git
+    ```
+1. Ensure you are running an up-to-date version of [Node.js](https://nodejs.org/en/download/package-manager/) on your machine, and that you have npm installed.
+1. Make sure you have [Gulp](https://gulpjs.org/getting-started.html) installed by running
+    ```
+    npm install gulp-cli -g
+    ```
+1. Open a terminal in the `asciinema-player-for-github` directory. Type
+    ```
+    npm install
+    ```
+    into the terminal to install the dependencies. To build the extension, type
+    ```
+    gulp
+    ```
+1. The extension files including the `manifest.json` file are in the `dist/` directory.
+
 ---
 
 ## License

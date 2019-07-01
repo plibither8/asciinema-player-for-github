@@ -1,4 +1,4 @@
-chrome.webRequest.onHeadersReceived.addListener(info => {
+browser.webRequest.onHeadersReceived.addListener(info => {
 	const headers = info.responseHeaders;
 	for (const [i, header] of headers.entries()) {
 		if (header.name.toLowerCase() === 'content-security-policy') {

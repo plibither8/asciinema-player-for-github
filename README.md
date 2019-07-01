@@ -1,18 +1,42 @@
 # <img src="assets/icon.png" width="45" align="left"> asciinema Player for GitHub
 
-[![Chrome Webstore Version](https://img.shields.io/chrome-web-store/v/mkllmpcfhjcbkmegdpnaemhpdddffhil.svg)](https://chrome.google.com/webstore/detail/asciinema-player-for-gith/mkllmpcfhjcbkmegdpnaemhpdddffhil)
-[![Chrome Webstore Users](https://img.shields.io/chrome-web-store/users/mkllmpcfhjcbkmegdpnaemhpdddffhil.svg)](https://chrome.google.com/webstore/detail/asciinema-player-for-gith/mkllmpcfhjcbkmegdpnaemhpdddffhil)
-[![Licence](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[link-cws]: https://chrome.google.com/webstore/detail/mkllmpcfhjcbkmegdpnaemhpdddffhil "Version published on Chrome Web Store"
+[link-amo]: https://addons.mozilla.org/en-US/firefox/addon/asciinema-player-for-github/ "Version published on Mozilla Add-ons"
 
-[![Made_with_love_in India](https://madewithlove.org.in/badge.svg)](https://madewithlove.org.in/)
+[![Licence](https://img.shields.io/badge/License-MIT-green.svg?style=flat-square)](LICENSE) 
+[![Build Status](https://img.shields.io/travis/plibither8/asciinema-player-for-github/master.svg?style=flat-square)](https://travis-ci.org/plibither8/asciinema-player-for-github)
+[![Chrome Web Store](https://img.shields.io/chrome-web-store/users/mkllmpcfhjcbkmegdpnaemhpdddffhil.svg?label=chrome%20users&style=flat-square)][link-cws]
+[![Mozilla Add-on](https://img.shields.io/amo/users/asciinema-player-for-github.svg?label=firefox%20users&style=flat-square)][link-amo]
+![Made with love in India](https://madewithlove.now.sh/in?heart=true&colorB=%23ff701f&template=flat-square)
 
 > Automatically detect instances of [asciinema](https://asciinema.org) links in a README on GitHub and embed the player in its place.
 
 This is a lightweight Chrome extension. Instead of being directed to the asciinema website to watch the "asciicast", watch it directly in the README (or any `.md`, `.rst`, `.textile`, [etc.](https://github.com/github/markup/blob/master/README.md#markups) file), thanks to the [embedded player widget](https://asciinema.org/docs/embedding). 🎉
 
-<a href='https://chrome.google.com/webstore/detail/asciinema-player-for-gith/mkllmpcfhjcbkmegdpnaemhpdddffhil?utm_campaign=PartBadge'><img alt='Get it on the Chrome Webstore' src='https://developer.chrome.com/webstore/images/ChromeWebStore_BadgeWBorder_v2_206x58.png' height="58px"/></a>
-
 ![Demo](assets/demo.gif)
+
+## Install
+
+- [**Chrome** extension][link-cws] [<img valign="middle" src="https://img.shields.io/chrome-web-store/v/mkllmpcfhjcbkmegdpnaemhpdddffhil.svg?label=%20">][link-cws]
+- [**Firefox** add-on][link-amo] [<img valign="middle" src="https://img.shields.io/amo/v/asciinema-player-for-github.svg?label=%20">][link-amo]
+- **Opera** extension: Use [this Opera extension](https://addons.opera.com/en/extensions/details/download-chrome-extension-9/) to install the Chrome version.
+
+## Development
+
+1. Clone this repository by running
+    ```
+    git clone https://github.com/plibither8/asciinema-player-for-github.git
+    ```
+1. Ensure you are running an up-to-date version of [Node.js](https://nodejs.org/en/download/package-manager/) on your machine, and that you have npm installed.
+1. Open a terminal in the `asciinema-player-for-github` directory. Type
+    ```
+    npm install
+    ```
+    into the terminal to install the dependencies. To build the extension, type
+    ```
+    npm run watch
+    ```
+1. The extension files including the `manifest.json` file are in the `dist/` directory.
 
 ### Content Security Policy Modification
 
@@ -25,27 +49,6 @@ This is a lightweight Chrome extension. Instead of being directed to the asciine
 For more details: [Content Security Policy (CSP) - Google Chrome](https://developer.chrome.com/extensions/contentSecurityPolicy)
 
 Code: [background.js](src/background.js)
-
-## Development
-
-1. Clone this repository by running
-    ```
-    git clone https://github.com/plibither8/asciinema-player-for-github.git
-    ```
-1. Ensure you are running an up-to-date version of [Node.js](https://nodejs.org/en/download/package-manager/) on your machine, and that you have npm installed.
-1. Make sure you have [Gulp](https://gulpjs.org/getting-started.html) installed by running
-    ```
-    npm install gulp-cli -g
-    ```
-1. Open a terminal in the `asciinema-player-for-github` directory. Type
-    ```
-    npm install
-    ```
-    into the terminal to install the dependencies. To build the extension, type
-    ```
-    gulp
-    ```
-1. The extension files including the `manifest.json` file are in the `dist/` directory.
 
 ---
 

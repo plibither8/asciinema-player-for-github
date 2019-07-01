@@ -1,67 +1,44 @@
 {
-  "name": "github-asciinema-embed-player",
-  "version": "0.0.1",
-  "description": "Automatically detect instances of asciinema links in a README on GitHub and embed the player in its place",
-  "main": "index.js",
+  "private": true,
   "scripts": {
-    "lint": "eclint check && xo",
-    "lint:fix": "eclint fix && xo --fix"
+    "lint": "xo",
+    "lint-fix": "xo --fix",
+    "build": "webpack --mode=production",
+    "watch": "webpack --mode=development --watch",
+    "watch:firefox": "web-ext run --source-dir=dist",
+    "version": "dot-json dist/manifest.json version $VER",
+    "release:amo": "cd dist && web-ext-submit --api-key=\"$WEB_EXT_API_KEY\" --api-secret=\"$WEB_EXT_API_SECRET\"",
+    "release:cws": "cd dist && webstore upload --auto-publish",
+    "release": "VER=$(daily-version) npm-run-all build version release:amo create-git-tag",
+    "create-git-tag": "git tag $VER -m $VER && git push origin $VER"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/agarwalml/mehul.al.git"
-  },
-  "dependencies": {},
   "devDependencies": {
-    "@babel/core": "^7.1.2",
-    "@babel/preset-env": "^7.1.0",
-    "del": "^3.0.0",
-    "eclint": "^2.8.1",
-    "gulp": "^4.0.0",
-    "gulp-babel": "^8.0.0",
-    "gulp-concat": "^2.6.1",
-    "gulp-uglify-es": "^1.0.4",
-    "gulp-zip": "^4.2.0",
-    "husky": "^1.3.1",
-    "lint-staged": "^8.1.3",
-    "merge-stream": "^1.0.1",
+    "chrome-webstore-upload-cli": "^1.2.0",
+    "copy-webpack-plugin": "^5.0.0",
+    "daily-version": "^0.12.0",
+    "dot-json": "^1.1.0",
+    "npm-run-all": "^4.1.5",
+    "size-plugin": "^1.1.2",
+    "terser-webpack-plugin": "^1.2.3",
+    "web-ext": "^3.0.0",
+    "web-ext-submit": "^2.9.3",
+    "webextension-polyfill": "^0.4.0",
+    "webpack": "^4.29.4",
+    "webpack-cli": "^3.2.3",
     "xo": "^0.24.0"
   },
-  "author": "Mihir Chaturvedi",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/plibither8/github-asciinema-embed-player/issues"
-  },
-  "homepage": "https://github.com/plibither8/github-asciinema-embed-player",
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "lint-staged": {
-    "relative": true,
-    "linters": {
-      "**/*": [
-        "eclint fix",
-        "git add"
-      ],
-      "**/*.{js,json}": [
-        "xo --fix",
-        "git add"
-      ]
-    }
-  },
   "xo": {
-    "overrides": [
-      {
-        "files": "src/**/*",
-        "env": [
-          "browser"
-        ]
-      }
+    "envs": [
+      "browser"
     ],
     "globals": [
-      "chrome"
-    ]
+      "browser"
+    ],
+    "rules": {
+      "import/no-unassigned-import": 0,
+      "import/no-named-as-default": 0,
+      "no-script-url": 0,
+      "brace-style": 0
+    }
   }
 }

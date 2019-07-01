@@ -19,7 +19,7 @@ for (const image of IMAGES) {
 	const scriptId = `asciicast-${castId}`;
 	playerScript.setAttribute('src', scriptSrc);
 	playerScript.setAttribute('id', scriptId);
-    playerScript.setAttribute('async', true);
+	playerScript.setAttribute('async', true);
 
 	imageAnchorEl.parentNode.replaceChild(playerScript, imageAnchorEl);
 }

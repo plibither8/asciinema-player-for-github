@@ -4,7 +4,6 @@
 [link-amo]: https://addons.mozilla.org/en-US/firefox/addon/asciinema-player-for-github/ "Version published on Mozilla Add-ons"
 
 [![Licence](https://img.shields.io/badge/License-MIT-green.svg?style=flat-square)](LICENSE) 
-[![Build Status](https://img.shields.io/travis/plibither8/asciinema-player-for-github/master.svg?style=flat-square)](https://travis-ci.org/plibither8/asciinema-player-for-github)
 [![Chrome Web Store](https://img.shields.io/chrome-web-store/users/mkllmpcfhjcbkmegdpnaemhpdddffhil.svg?label=chrome%20users&style=flat-square)][link-cws]
 [![Mozilla Add-on](https://img.shields.io/amo/users/asciinema-player-for-github.svg?label=firefox%20users&style=flat-square)][link-amo]
 ![Made with love in India](https://madewithlove.now.sh/in?heart=true&colorB=%23ff701f&template=flat-square)

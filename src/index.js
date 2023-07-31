@@ -12,7 +12,7 @@ for (const image of IMAGES) {
 	}
 
 	const imageAnchorEl = image.parentNode;
-	const castId = imageSrc.pathname.split('/a/')[1].split('.')[0];
+	const castId = imageSrc.pathname.split('/a/')[1].split('.')[0].split('?')[0];
 
 	const playerScript = document.createElement('script');
 	const scriptSrc = `https://asciinema.org/a/${castId}.js`;
